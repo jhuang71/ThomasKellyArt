@@ -1,0 +1,139 @@
+body {
+	background-color: #000;
+}
+
+#landing-header {
+	z-index: 2;
+	position: relative;
+	text-align: center;
+	padding-top: 35vh;
+	text-shadow: white 0px 0px 10px;
+}
+
+#landing-header h1 {
+	color: white;
+	font-weight: bold;
+	background: black;
+	padding: 20px;
+}
+
+#landing-header a {
+	/* margin-top: 20px; */
+	text-decoration: none;
+}
+
+.slideshow {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.slideshow li {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	opacity: 0;
+	z-index: 0;
+	animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+	background-image: url(https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80);
+}
+.slideshow li:nth-child(2) {
+	background-image: url(https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2315&q=80);
+	animation-delay: 10s;
+}
+.slideshow li:nth-child(3) {
+	background-image: url(https://images.unsplash.com/photo-1532540983331-3260f8487880?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2090&q=80);
+	animation-delay: 20s;
+}
+.slideshow li:nth-child(4) {
+	background-image: url(https://images.unsplash.com/photo-1487088678257-3a541e6e3922?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80);
+	animation-delay: 30s;
+}
+.slideshow li:nth-child(5) {
+	background-image: url(https://images.unsplash.com/photo-1549834185-bd9f078a5dfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80);
+	animation-delay: 40s;
+}
+
+@keyframes imageAnimation {
+	0% {
+		opacity: 0;
+		animation-timing-function: ease-in;
+	}
+	10% {
+		opacity: 1;
+		animation-timing-function: ease-out;
+	}
+	20% {
+		opacity: 1;
+	}
+	30% {
+		opacity: 0;
+	}
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
+
+/* button */
+@import url("https://fonts.googleapis.com/css?family=Raleway:500");
+
+button {
+	-webkit-appearance: none;
+	background: -webkit-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+	background: linear-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+	background-size: 500%;
+	border: none;
+	border-radius: 5rem;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	color: #fff;
+	cursor: pointer;
+	font: 1em Raleway, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	height: 5rem;
+	letter-spacing: 0.05em;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 20rem;
+	margin-top: 30px;
+}
+
+button:hover {
+	animation-name: gradient;
+	-webkit-animation-name: gradient;
+	animation-duration: 2s;
+	-webkit-animation-duration: s;
+	animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100%;
+	}
+}
